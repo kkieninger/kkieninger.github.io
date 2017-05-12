@@ -79,6 +79,10 @@ nav li {
   margin-left: 65px;
 }
 
+section li {
+	margin-bottom: 5px;
+}
+
 /* MAIN */
 
 .main-content {
@@ -105,9 +109,12 @@ nav li {
 }
 
 .skill-section {
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 1em;
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1em;
 }
 
 .skill-section > div {
@@ -133,7 +140,9 @@ nav li {
 /* PORTFOLIO */
 
 .portfolio-item {
-	display: flex;
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 	margin-bottom: 15px;
 }
 .portfolio-item div {
@@ -254,4 +263,19 @@ footer {
 	}
 }
 
+@media (max-width: 500px) {
+	.skills-wrap,
+	section ul {
+		padding-left: 0;
+	}
+	section ul.contact-info {
+		padding-left: 40px;
+	}
+	.skill-section {
+	  display: block;
+	}
 
+	.skill-section > div {
+		width: 100%;
+	}
+}
